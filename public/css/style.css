@@ -1,0 +1,97 @@
+/* Stile Finale: Pulito, Moderno e Professionale */
+
+/* Personalizzazione dei colori */
+:root {
+    --bs-primary: #34495e;
+    --bs-secondary: #95a5a6;
+    --bs-success: #2ecc71;
+    --bs-info: #3498db;
+    --bs-warning: #f1c40f;
+}
+
+/* Stile globale del corpo */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Animazione al passaggio del mouse sulle card */
+.card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+
+/* Regole per i link e i bottoni */
+.btn-primary {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+.btn-outline-primary {
+    color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--bs-primary);
+    color: #fff;
+}
+
+/* Ombreggiatura per le navbar */
+.navbar {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Animazione per i link della navbar */
+.navbar-nav .nav-link {
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--bs-primary) !important;
+}
+
+/* Animazione di sollevamento per i badge */
+.badge {
+    transition: transform 0.2s ease-in-out;
+}
+
+.badge:hover {
+    transform: translateY(-2px);
+}
+
+/* Animazione a cascata */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stile per la navbar fissa che cambia al scroll */
+.navbar {
+    transition: box-shadow 0.3s ease-in-out;
+    z-index: 1050;
+}
+
+.navbar.scrolled {
+    /* Manteniamo l'ombra più sottile per un tocco di eleganza */
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Effetto ingrandimento per il logo al passaggio del mouse */
+.navbar-brand {
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.1);
+}
