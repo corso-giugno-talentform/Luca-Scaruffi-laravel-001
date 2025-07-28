@@ -2,8 +2,8 @@
 
     <main class="py-5 mt-5">
         <div class="container py-5">
-            <h1 class="mb-2 text-center fw-bold display-4">Chi Sono</h1>
-            <p class="lead text-center mb-5 mx-auto text-muted" style="max-width: 800px;">
+            <h1 class="mb-2 text-center fw-bold display-4 fade-in">Chi Sono</h1>
+            <p class="lead text-center mb-5 mx-auto text-muted fade-in" style="max-width: 800px;">
                 Scopri la mia storia, le mie competenze e la filosofia che guida il mio lavoro.
             </p>
 
