@@ -18,7 +18,7 @@
                 @endforeach
             </div>
 
-            <div class="text-center mt-5 py-3 bg-light p-4 rounded-3 shadow-sm fade-in">
+            <div class="text-center mt-5 py-5 section-bg-light p-4 rounded-4 shadow-sm fade-in">
                 <h2 class="mb-4 fw-bold display-5">Hai un'idea per un nuovo progetto?</h2>
                 <p class="lead mb-4 mx-auto text-muted" style="max-width: 800px;">
                     Sono sempre entusiasta di collaborare a nuove iniziative.

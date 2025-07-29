@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Illuminate\Http\Request; // Importa la classe Request
+use Illuminate\Support\Facades\Mail; // Importa la classe Mail per l'invio delle email
+use App\Mail\SendUserContactMail; // Importa la Mailable per l'utente
+use App\Mail\SendAdminContactMail; // Importa la Mailable per l'amministratore
 
 class PageController extends Controller
 {
@@ -260,6 +263,33 @@ class PageController extends Controller
         return view('contact');
     }
 
+    // Metodo per gestire l'invio del modulo di contatto
+    public function submitContactForm(Request $request)
+    {
+        // Step 1: Validazione lato server dei dati del form
+        $request->validate([
+            'nome' => 'required|string|min:10|max:20',
+            'email' => 'required|email|min:10|max:20',
+            'oggetto' => 'required|string|min:10|max:20',
+            'messaggio' => 'required|string|min:10', // Nessun max per il messaggio
+        ]);
+
+        // Step 2: Mapping esplicito dei dati validati in un array $data
+        $data = [
+            'nome' => $request->nome,
+            'email' => $request->email,
+            'oggetto' => $request->oggetto,
+            'messaggio' => $request->messaggio,
+        ];
+
+        // Step 3: Invio delle email
+        Mail::to($data['email'])->send(new SendUserContactMail($data));
+        Mail::to('admin@tuodominio.it')->send(new SendAdminContactMail($data)); // Sostituisci con la tua email reale
+
+        // Step 4: Reindirizza con un messaggio di successo
+        return redirect()->route('contact')->with('success', 'Il tuo messaggio è stato inviato con successo!');
+    }
+
     public function projectsIndex()
     {
         $projectsList = [];
@@ -300,7 +330,6 @@ class PageController extends Controller
             'obiettivi_risultati' => $project['obiettivi_risultati'] ?? [],
             'galleria_immagini' => $project['galleria_immagini'] ?? [],
         ];
-
 
         return view('project', ['project' => $projectData]);
     }

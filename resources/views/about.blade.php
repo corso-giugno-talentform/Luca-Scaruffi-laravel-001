@@ -26,12 +26,12 @@
                     </p>
                 </div>
                 <div class="col-lg-5">
-                    <img src="https://via.placeholder.com/600x600/f0f0f0/cccccc?text=La+Tua+Immagine"
+                    <img src="https://via.placeholder.com/600x600/e0e0e0/999999?text=La+Tua+Immagine"
                         class="img-fluid rounded-4 shadow-lg w-100" alt="La Tua Immagine Profilo">
                 </div>
             </div>
 
-            <div class="py-5 bg-light p-4 rounded-3 shadow-sm mb-5 fade-in">
+            <div class="py-5 section-bg-light p-4 rounded-4 shadow-sm mb-5 fade-in">
                 <h2 class="fw-bold mb-5 display-5 text-primary text-center">Le Mie Competenze</h2>
                 <div class="row g-5">
                     <div class="col-lg-6">
@@ -87,9 +87,9 @@
                 </div>
             </div>
 
-            <div class="text-center mt-5 py-3 bg-light p-4 rounded-3 shadow-sm fade-in">
+            <div class="text-center mt-5 py-5 section-bg-light p-4 rounded-4 shadow-sm fade-in">
                 <h2 class="mb-4 fw-bold display-5">Pronto a collaborare?</h2>
-                <p class="lead mb-4 mx-auto" style="max-width: 800px;">
+                <p class="lead mb-4 mx-auto text-muted" style="max-width: 800px;">
                     Sono sempre alla ricerca di nuove sfide e opportunità per creare qualcosa di straordinario.
                 </p>
                 <a href="{{ route('contact') }}" class="btn btn-success btn-lg"><i class="bi bi-envelope me-2"></i>

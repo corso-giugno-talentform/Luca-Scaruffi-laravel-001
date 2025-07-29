@@ -1,5 +1,6 @@
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom fixed-top shadow-sm">
+    {{-- Navbar fissa in alto, con sfondo bianco, ombra leggera e transizione --}}
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom fixed-top shadow-sm" id="navbar">
         <div class="container">
             <a class="navbar-brand text-primary" href="{{ route('home') }}">
                 <i class="bi bi-terminal fs-1"></i>

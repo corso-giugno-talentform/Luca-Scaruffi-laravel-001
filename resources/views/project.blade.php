@@ -8,8 +8,8 @@
 
             <div class="row justify-content-center mb-5 fade-in">
                 <div class="col-lg-10">
-                    <div class="card shadow-lg border-light rounded-3 bg-white">
-                        <img src="{{ $project['image'] }}" class="card-img-top object-fit-cover rounded-top-3"
+                    <div class="card shadow-lg rounded-4 bg-white">
+                        <img src="{{ $project['image'] }}" class="card-img-top object-fit-cover rounded-top-4"
                             alt="Immagine Progetto {{ $project['nome'] }}" style="height: 400px;">
                         <div class="card-body p-5">
                             <h2 class="card-title fw-bold mb-3 text-primary">{{ $project['nome'] }}</h2>
@@ -71,9 +71,9 @@
                                 <div class="row row-cols-1 row-cols-md-2 g-4">
                                     @foreach ($project['galleria_immagini'] as $gallery_image)
                                         <div class="col">
-                                            <div class="card shadow-sm border-light rounded-3">
+                                            <div class="card shadow-sm rounded-4">
                                                 <img src="{{ $gallery_image }}"
-                                                    class="card-img-top object-fit-cover rounded-3"
+                                                    class="card-img-top object-fit-cover rounded-4"
                                                     alt="Galleria Immagine Progetto {{ $project['nome'] }}"
                                                     style="height: 250px;">
                                             </div>
@@ -86,9 +86,9 @@
                 </div>
             </div>
 
-            <div class="text-center mt-4 py-3 bg-light p-4 rounded-3 shadow-sm fade-in">
+            <div class="text-center mt-4 py-5 section-bg-light p-4 rounded-4 shadow-sm fade-in">
                 <h2 class="mb-4 fw-bold display-5">Ti è piaciuto questo progetto?</h2>
-                <p class="lead mb-4 mx-auto" style="max-width: 800px;">
+                <p class="lead mb-4 mx-auto text-muted" style="max-width: 800px;">
                     Se sei interessato a un progetto simile o hai una tua idea da sviluppare, non esitare a contattarmi!
                 </p>
                 <a href="{{ route('projects.index') }}" class="btn btn-outline-dark btn-lg me-3"><i

@@ -8,8 +8,8 @@
 
             <div class="row justify-content-center mb-5 fade-in">
                 <div class="col-lg-10">
-                    <div class="card shadow-lg border-light rounded-3 bg-white">
-                        <img src="{{ $service['image'] }}" class="card-img-top object-fit-cover rounded-top-3"
+                    <div class="card shadow-lg rounded-4 bg-white">
+                        <img src="{{ $service['image'] }}" class="card-img-top object-fit-cover rounded-top-4"
                             alt="Immagine Servizio {{ $service['title'] }}" style="height: 400px;">
 
                         <div class="card-body p-5">
@@ -31,7 +31,7 @@
                                 </ul>
                             @endif
 
-                            <div class="text-center mt-5 py-3 bg-light p-4 rounded-3 shadow-sm">
+                            <div class="text-center mt-5 py-5 section-bg-light p-4 rounded-4 shadow-sm">
                                 <h2 class="mb-4 fw-bold display-5">Pronto a Iniziare?</h2>
                                 <p class="lead mb-4 mx-auto text-muted" style="max-width: 800px;">
                                     Discutiamo di come questo servizio possa aiutarti a raggiungere i tuoi obiettivi.

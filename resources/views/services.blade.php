@@ -5,7 +5,7 @@
                 <h1 class="mb-5 text-center fw-bold display-4">I Miei Servizi</h1>
                 <p class="lead text-center mb-5 mx-auto text-muted" style="max-width: 800px;">
                     Offro una gamma completa di servizi digitali, progettati per aiutare la tua attività a crescere e a
-                    distinguersi online.
+                    distinguere online.
                 </p>
             </div>
 
@@ -17,7 +17,7 @@
                 @endforeach
             </div>
 
-            <div class="text-center mt-5 py-3 bg-light p-4 rounded-3 shadow-sm fade-in">
+            <div class="text-center mt-5 py-5 section-bg-light p-4 rounded-4 shadow-sm fade-in">
                 <h2 class="mb-4 fw-bold display-5">Non sai quale servizio fa per te?</h2>
                 <p class="lead mb-4 mx-auto text-muted" style="max-width: 800px;">
                     Contattami per una consulenza gratuita e personalizzata. Troveremo insieme la soluzione migliore per

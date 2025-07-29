@@ -1,1 +1,406 @@
 @import 'bootstrap';
+/* resources/css/app.css */
+
+:root {
+    --bs-primary: #2F3C48;
+    /* Deep Slate Gray - Testi principali, titoli, bottoni primari */
+    --bs-secondary: #8D99AE;
+    /* Light Slate Gray - Testi secondari, muted */
+    --bs-accent: #4CAF50;
+    /* Vibrant Green - Colore per azioni, successi, highlight */
+    --bs-background-light: #F5F7FA;
+    /* Very Light Gray/Off-white - Sfondi chiari */
+    --bs-background-medium: #E0E6ED;
+    /* Slightly darker light gray - Sfondi di sezione */
+    --bs-text-dark: #212529;
+    /* Quasi nero per testi molto scuri */
+    --bs-text-light: #ffffff;
+    /* Bianco per testi su sfondi scuri */
+
+    /* Colori specifici per icone/avvisi (distinti ma armonizzati) */
+    --bs-warning: #FFC107;
+    /* Giallo/Arancio caldo per warning */
+    --bs-info: #2196F3;
+    /* Blu standard per info */
+    --bs-danger: #F44336;
+    /* Rosso standard per danger */
+
+    /* Mappatura per Bootstrap */
+    --bs-body-bg: var(--bs-background-light);
+    /* Sfondo del body */
+    --bs-body-color: var(--bs-primary);
+    /* Colore testo di default */
+    --bs-link-color: var(--bs-accent);
+    /* Colore link */
+    --bs-link-hover-color: #388E3C;
+    /* Colore link hover */
+}
+
+/* Applica il font Poppins al corpo */
+.font-poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Stile globale del corpo */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--bs-body-bg);
+    /* Usa la variabile per il background */
+    color: var(--bs-body-color);
+    /* Usa la variabile per il colore del testo */
+}
+
+/* Animazione al passaggio del mouse sulle card */
+.card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: none;
+    /* Rimuove il bordo di default di Bootstrap */
+    border-radius: 1rem;
+    /* Angoli più arrotondati */
+    overflow: hidden;
+    /* Assicura che l'immagine arrotondata non fuoriesca */
+    background-color: var(--bs-text-light);
+    /* Sfondo bianco per le card */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.08);
+    /* Ombra iniziale più morbida */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    /* Solleva di più per un effetto più marcato */
+    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.15) !important;
+    /* Ombra più pronunciata e morbida al hover */
+}
+
+/* Regole per i link e i bottoni */
+.btn-primary {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+    transition: all 0.3s ease-in-out;
+    border-radius: 0.75rem;
+    /* Angoli più arrotondati */
+    padding: 0.85rem 1.8rem;
+    /* Padding generoso */
+    font-weight: 600;
+    /* Testo più spesso */
+}
+
+.btn-primary:hover {
+    background-color: var(--bs-text-dark);
+    /* Una tonalità più scura al hover */
+    border-color: var(--bs-text-dark);
+    transform: translateY(-2px);
+    /* Piccolo sollevamento al hover */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.12);
+}
+
+.btn-outline-primary {
+    color: var(--bs-primary);
+    border-color: var(--bs-primary);
+    transition: all 0.3s ease-in-out;
+    border-radius: 0.75rem;
+    padding: 0.85rem 1.8rem;
+    font-weight: 600;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--bs-primary);
+    color: var(--bs-text-light);
+    transform: translateY(-2px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.12);
+}
+
+.btn-success {
+    background-color: var(--bs-accent);
+    /* Usa il colore accent per i bottoni success */
+    border-color: var(--bs-accent);
+    transition: all 0.3s ease-in-out;
+    border-radius: 0.75rem;
+    padding: 0.85rem 1.8rem;
+    font-weight: 600;
+}
+
+.btn-success:hover {
+    background-color: var(--bs-link-hover-color);
+    /* Tonalità più scura al hover */
+    border-color: var(--bs-link-hover-color);
+    transform: translateY(-2px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.12);
+}
+
+.btn-dark {
+    background-color: var(--bs-primary);
+    /* Usa il colore primary per i bottoni dark */
+    border-color: var(--bs-primary);
+    transition: all 0.3s ease-in-out;
+    border-radius: 0.75rem;
+    padding: 0.85rem 1.8rem;
+    font-weight: 600;
+}
+
+.btn-dark:hover {
+    background-color: var(--bs-text-dark);
+    /* Tonalità più scura al hover */
+    border-color: var(--bs-text-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.12);
+}
+
+.btn-outline-dark {
+    color: var(--bs-primary);
+    border-color: var(--bs-primary);
+    transition: all 0.3s ease-in-out;
+    border-radius: 0.75rem;
+    padding: 0.85rem 1.8rem;
+    font-weight: 600;
+}
+
+.btn-outline-dark:hover {
+    background-color: var(--bs-primary);
+    color: var(--bs-text-light);
+    transform: translateY(-2px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.12);
+}
+
+
+/* Navbar */
+.navbar {
+    background-color: var(--bs-text-light) !important;
+    /* Sfondo bianco puro */
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.08) !important;
+    /* Ombra più morbida */
+    transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    z-index: 1050;
+    padding-top: 1rem;
+    /* Padding leggermente aumentato */
+    padding-bottom: 1rem;
+}
+
+.navbar.scrolled {
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05) !important;
+    /* Ombra più sottile allo scroll */
+    background-color: var(--bs-text-light) !important;
+    /* Mantiene bianco */
+}
+
+/* Animazione per i link della navbar */
+.navbar-nav .nav-link {
+    color: var(--bs-primary);
+    /* Colore testo link navbar */
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    padding: 0.7rem 1.2rem;
+    /* Aumenta il padding */
+    border-radius: 0.5rem;
+    /* Angoli arrotondati */
+    font-weight: 500;
+    /* Leggermente più spesso */
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--bs-accent) !important;
+    /* Colore accent al hover */
+    background-color: rgba(76, 175, 80, 0.1);
+    /* Sfondo leggero al hover basato sull'accent */
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--bs-accent) !important;
+    /* Colore accent quando attivo */
+    background-color: rgba(76, 175, 80, 0.15);
+    /* Sfondo più scuro per attivo basato sull'accent */
+    font-weight: 600;
+    /* Più spesso quando attivo */
+}
+
+/* Effetto ingrandimento per il logo al passaggio del mouse */
+.navbar-brand {
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.1);
+}
+
+/* Animazione a cascata */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Sezioni con background leggero per separazione visiva */
+.section-bg-light {
+    background-color: var(--bs-background-light);
+    /* Sfondo leggero */
+}
+
+.section-bg-medium {
+    background-color: var(--bs-background-medium);
+    /* Sfondo medio */
+}
+
+.section-bg-white {
+    background-color: var(--bs-text-light);
+    /* Sfondo bianco */
+}
+
+/* Stili per i titoli */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--bs-primary);
+    font-weight: 700;
+}
+
+.display-3,
+.display-4,
+.display-5 {
+    font-weight: 800;
+    /* Ancora più spesso per i display headings */
+    line-height: 1.2;
+    /* Migliora la leggibilità */
+}
+
+/* Testo */
+.lead {
+    color: var(--bs-secondary);
+    line-height: 1.6;
+    /* Migliora la leggibilità */
+}
+
+.text-muted {
+    color: var(--bs-secondary) !important;
+}
+
+.text-primary {
+    color: var(--bs-primary) !important;
+}
+
+/* Badge */
+.badge {
+    transition: transform 0.2s ease-in-out;
+    border-radius: 0.375rem;
+    /* Angoli più arrotondati */
+    padding: 0.6em 1em;
+    /* Padding leggermente aumentato */
+    font-weight: 500;
+}
+
+.badge:hover {
+    transform: translateY(-2px);
+}
+
+.badge.bg-primary {
+    background-color: var(--bs-primary) !important;
+    color: var(--bs-text-light) !important;
+}
+
+/* Immagini nelle card dettagli */
+.card-img-top {
+    border-top-left-radius: 1rem !important;
+    border-top-right-radius: 1rem !important;
+}
+
+/* Form controls */
+.form-control {
+    border-radius: 0.5rem;
+    border-color: rgba(0, 0, 0, 0.1);
+    padding: 0.8rem 1rem;
+    /* Padding aumentato */
+    font-size: 1rem;
+}
+
+.form-control:focus {
+    border-color: var(--bs-accent);
+    /* Bordo accent al focus */
+    box-shadow: 0 0 0 0.25rem rgba(76, 175, 80, 0.25);
+    /* Ombra focus basata sull'accent */
+}
+
+/* List group items */
+.list-group-item {
+    border-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Hero Section specific styles */
+.hero-section {
+    background: linear-gradient(to bottom right, var(--bs-background-light), var(--bs-background-medium));
+    /* Sfumatura armonizzata */
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    border-bottom-left-radius: 2rem;
+    /* Angoli arrotondati in basso */
+    border-bottom-right-radius: 2rem;
+    margin-bottom: 3rem;
+    /* Margine per separare dalla sezione successiva */
+}
+
+/* Call to Action Section specific styles */
+.cta-section {
+    background: var(--bs-background-light);
+    /* Sfondo chiaro */
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    border-radius: 1.5rem;
+    /* Angoli arrotondati */
+    color: var(--bs-primary);
+    /* Testo scuro su sfondo chiaro */
+    margin-top: 4rem;
+    /* Margine superiore */
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.08);
+    /* Aggiunta ombra per farla risaltare */
+}
+
+.cta-section .lead {
+    color: var(--bs-secondary);
+    /* Testo lead con colore secondary */
+}
+
+.cta-section h2 {
+    color: var(--bs-primary);
+    /* Titolo con colore primary */
+}
+
+/* General section padding */
+section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+/* Stile per le icone social nel footer */
+.social-icon {
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px) scale(1.1);
+    color: var(--bs-accent) !important;
+    /* Colore accent al hover */
+}
+
+/* Assicurati che le icone mantengano i loro colori specifici nella home */
+.text-warning {
+    color: var(--bs-warning) !important;
+}
+
+.text-info {
+    color: var(--bs-info) !important;
+}
+
+.text-success {
+    color: var(--bs-accent) !important;
+}
+
+/* Usa accent per success */
+.text-danger {
+    color: var(--bs-danger) !important;
+}
